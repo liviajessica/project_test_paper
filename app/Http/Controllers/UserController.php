@@ -86,6 +86,7 @@ class UserController extends Controller
                 'message' => 'Sorry, the user cannot be logged out'
             ], 500);
         }
+        return redirect('/');
     }
 
     public function getAuthUser(Request $request)

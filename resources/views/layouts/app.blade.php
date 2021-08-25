@@ -52,6 +52,23 @@
                     $('#dataTableTransaction').DataTable();
                 });
             </script>
+            <script>
+                $("#deleteTransaction").click(function() {
+                    return confirm("Do you want to delete this ?");
+                });
+                $("#deleteAccount").click(function() {
+                    return confirm("Do you want to delete this ?");
+                });
+                $("#logout").click(function() {
+                    return confirm("Do you want to log out ?");
+                });
+                $("#restoreAccount").click(function() {
+                    return confirm("Do you want to restore ?");
+                });
+                $("#restoreTransaction").click(function() {
+                    return confirm("Do you want to restore ?");
+                });
+            </script>
             <!-- @yield('footer_scripts') -->
             @include('layouts.footer')
 

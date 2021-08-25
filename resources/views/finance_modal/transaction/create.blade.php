@@ -49,6 +49,7 @@
                                                 @enderror
                                             </div>
                                             <button type="submit" class="btn btn-primary">Simpan</button>
+                                            <a href="javascript:history.back()" class="btn btn-danger">Batal</a>
                                         </form>
                                     </div>
                                 </div>

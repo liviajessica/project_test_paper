@@ -33,6 +33,7 @@
                                                 <label for="description">Description</label>
                                                 <input type="text" class="form-control form-control-user" id="description" value="{{$financeAccount->description}}">
                                             </div>
+                                            <a href="javascript:history.back()" class="btn btn-danger">Kembali</a>
                                         </form>
                                     </div>
                                 </div>

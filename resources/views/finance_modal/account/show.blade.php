@@ -4,11 +4,13 @@
     <div class="card shadow mb-4 mt-4">
         <div class="card-header d-sm-flex align-items-center justify-content-between py-3 mb-4">
             <h6 class="m-0 font-weight-bold text-primary">All Finance Account</h6>
+            <a href="\account\create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-folder-plus fa-sm text-white-50"></i> Create New Account</a>
+        </div>
+        <div>
             <form action="\account\restore" method="post">
                 @csrf
-                <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-folder-plus fa-sm text-white-50"></i> Restore All Deleted Account</button>
+                <button class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm" id="restoreAccount"><i class="fas fa-trash-restore fa-sm text-white-50"></i> Restore All Deleted Account</button>
             </form>
-            <a href="\account\create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-folder-plus fa-sm text-white-50"></i> Create New Account</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -37,7 +39,7 @@
                                             <form action="\account\{{$data->id}}\delete" method="post">
                                                 @method('delete')
                                                 @csrf
-                                                <button class="dropdown-item" type="submit">Delete</button>
+                                                <button id="deleteAccount" class="dropdown-item" type="submit">Delete</button>
                                             </form>
                                         </div>
                                     </div>

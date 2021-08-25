@@ -42,6 +42,7 @@
                                                 <input type="text" class="form-control form-control-user" id="description" value="{{$financeAccount->description}}" name="description">
                                             </div>
                                             <button type="submit" class="btn btn-primary">Simpan</button>
+                                            <a href="javascript:history.back()" class="btn btn-danger">Batal</a>
                                         </form>
                                     </div>
                                 </div>
