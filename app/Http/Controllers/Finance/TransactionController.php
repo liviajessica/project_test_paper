@@ -56,7 +56,7 @@ class TransactionController extends Controller
         $request->validate([
             'finance_name' => 'required',
             'finance_account_id' => 'required',
-            'amount' => 'required'
+            'amount' => 'required|integer'
         ]);
 
         FinanceTransaction::create($request->all());
@@ -121,7 +121,7 @@ class TransactionController extends Controller
         $request->validate([
             'finance_name' => 'required',
             'finance_account_id' => 'required',
-            'amount' => 'required'
+            'amount' => 'required|integer'
         ]);
 
         FinanceTransaction::where('id', $financeTransaction->id)
