@@ -16,7 +16,7 @@ class FinanceTransaction extends Migration
         Schema::create('finance_transaction', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('finance_name');
-            $table->integer('finance_account_id');
+            $table->bigInteger('finance_account_id');
             $table->float('amount', 8, 2);
             $table->longText('description');
             $table->timestamps();
