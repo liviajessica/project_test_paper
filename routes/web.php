@@ -9,6 +9,9 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+
+Mohon maaf sebelumnya, seharusnya menurut kaidah jwt auth, harusnya Route dashboard, account, dan transaction dimasukkan kedalam group 'middleware' => 'jwt.auth', tetapi saya kurang memahami untuk jwt bearer token ketika di set kedalam header laravel. Saya akan berusaha mencari tahu dan belajar kembali untuk mendalami laravel jwt auth ini. Saya dapat menampilkan token melalui response json saja. Untuk handle jwt pun sudah dapat berjalan secara sisi back end. Saya memindahkan Route dibawah ini bertujuan untuk melihat fitur lain selain dari login register. Terima kasih atas perhatiannya.
+
 */
 
 // Route::get('/', function () {
