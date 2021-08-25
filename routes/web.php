@@ -20,10 +20,11 @@ Route::post('/auth/login', 'UserController@login');
 Route::get('/auth/create', 'UserController@create');
 Route::post('/auth/register', 'UserController@register');
 
-Route::get('/auth/logout', 'UserController@logout');
 Route::group(['middleware' => 'jwt.auth'], function () {
+    Route::get('/auth/logout', 'UserController@logout');
     Route::get('/user', 'UserController@getAuthUser');
 });
+
 Route::get('/dashboard', 'Controller@dashboard');
 
 Route::get('/account', 'Finance\AccountController@index');
@@ -43,6 +44,3 @@ Route::get('/transaction/{financeTransaction}', 'Finance\TransactionController@e
 Route::patch('/transaction/{financeTransaction}/update', 'Finance\TransactionController@update');
 Route::delete('/transaction/{financeTransaction}/delete', 'Finance\TransactionController@destroy');
 Route::post('/transaction/restore', 'Finance\TransactionController@restoreAll');
-
-// Route::get('/register', 'Controller@register');
-// Route::resource('account', 'Finance\AccountController');

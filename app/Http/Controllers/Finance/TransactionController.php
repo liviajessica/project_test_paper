@@ -30,7 +30,6 @@ class TransactionController extends Controller
             ->join('finance_account as b', 'a.finance_account_id', '=', 'b.id')
             ->where('a.deleted_at', null)
             ->get();
-        // $transaction = FinanceTransaction::all();
         $account = FinanceAccount::all();
         return view('finance', ['transaction' => $transaction, 'account' => $account]);
     }

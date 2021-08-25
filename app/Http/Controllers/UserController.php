@@ -29,7 +29,6 @@ class UserController extends Controller
         //     'success' => true,
         //     'data' => $user
         // ], 200);
-
         return redirect('/');
     }
 

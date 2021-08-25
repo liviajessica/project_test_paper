@@ -28,11 +28,6 @@ class Controller extends BaseController
         return view('login');
     }
 
-    // public function register()
-    // {
-    //     return view('register');
-    // }
-
     public function dashboard(Request $request)
     {
         $transaction = FinanceTransaction::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"), date('Y'))->get();
