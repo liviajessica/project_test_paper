@@ -95,9 +95,21 @@ class TransactionController extends Controller
      */
     public function edit(FinanceTransaction $financeTransaction)
     {
-        return view('finance_modal.transaction.update', compact('financeTransaction'));
+        $rfinanceTransaction = DB::table('finance_transaction as a')
+            ->select(
+                'a.id',
+                'a.finance_name',
+                'a.finance_account_id',
+                'b.account_name',
+                'a.description',
+                'a.amount'
+            )
+            ->join('finance_account as b', 'a.finance_account_id', '=', 'b.id')
+            ->where('a.id', $financeTransaction->id)
+            ->first();
+        $account = FinanceAccount::all();
+        return view('finance_modal.transaction.update', ['financeTransaction' => $rfinanceTransaction, 'account' => $account]);
     }
-
     /**
      * Update the specified resource in storage.
      *
